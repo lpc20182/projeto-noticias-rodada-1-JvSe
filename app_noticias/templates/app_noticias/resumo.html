@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Resumo das notícias</title>
+</head>
+<body>
+<h1>Resumo das notícias</h1>
+<h3>Quantidade de notícias {{ total }}.</h3>
+<h4>Quantidade de noticias por categoria:</h4>
+{% for categoria in categorias %}
+    <li>Categoria: {{ categoria.nome }}</li>
+    <ul>Quantidade de noticias: {{ categoria.quantidade_noticias }}</ul>
+{% endfor %}
+</body>
+</html>
