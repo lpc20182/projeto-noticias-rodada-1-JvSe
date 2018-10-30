@@ -24,9 +24,6 @@ class NoticiasResumoView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['total'] = Noticia.objects.count()
-
-        for categoria in Categoria.objects.all():
-            categoria.quantidade_noticias = categoria.quantidade_noticias()
         context['categorias'] = Categoria.objects.all()
         
         return context
